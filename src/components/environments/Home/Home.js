@@ -1,12 +1,29 @@
 import React from 'react'
 import experience_date_normalizer from '../../../normalizer/experience_date'
+import Head from 'next/head'
+import education_date_normalizer from '../../../normalizer/education_date'
 
-function Home({ currentDate, experiences }) {
+import profileImage from '../../../../public/images/profile-photo.png'
+import SkillSection from '../../organisms/SkillSection/SkillSection'
+
+function Home({ currentDate, experiences, educations, skills }) {
   return (
     <>
+      <Head>
+        <title>
+          Maria Diniz | Marketing Digital | Formanda de Comunicação Social
+        </title>
+        <html lang="pt-BR" />
+      </Head>
       <main id="homePage">
         <section className="card">
-          <article className="profile-image" />
+          <article className="profile-image">
+            <picture>
+              <img src={profileImage} alt="Foto de perfil de Maria Diniz" />
+            </picture>
+
+            <SkillSection skills={skills} />
+          </article>
           <article className="profile-infos">
             <section className="presentation">
               <article className="me">
@@ -67,10 +84,39 @@ function Home({ currentDate, experiences }) {
                 ))}
               </ul>
             </section>
+
+            <section className="educations">
+              <h2>Formação Acadêmica</h2>
+
+              <ul>
+                {educations.map(education => (
+                  <li key={education.id}>
+                    <h3>
+                      {education.title},{' '}
+                      <a
+                        href={education.institution_url}
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        {education.institution_name}
+                      </a>
+                    </h3>
+                    <h4>
+                      {education_date_normalizer(education.started_at)} -{' '}
+                      {education.finished_at
+                        ? education_date_normalizer(education.finished_at)
+                        : 'O momento'}
+                    </h4>
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+            <SkillSection skills={skills} />
           </article>
+          <footer>Build at {currentDate}</footer>
         </section>
       </main>
-      <footer>Build at {currentDate}</footer>
     </>
   )
 }

@@ -8,3 +8,6 @@ module.exports = {
     REVALIDATE_TIME: process.env.REVALIDATE_TIME || 60 * 60 * 1,
   },
 }
+
+const withImages = require('next-images')
+module.exports = withImages()
