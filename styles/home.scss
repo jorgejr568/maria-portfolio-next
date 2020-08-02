@@ -1,0 +1,108 @@
+
+main#homePage {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  height: 100vh !important;
+  justify-content: center;
+  align-items: center;
+
+  section.card {
+    background-color: white;
+    box-shadow: #444 2px 20px 80px;
+    border-radius: 8px;
+    padding: 80px;
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+
+    article.profile-image {
+      min-width: 40%;
+    }
+
+    article.profile-infos {
+      section.presentation {
+        article.me{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          h1 {
+            font-size: 54px;
+            font-weight: bold;
+            flex-grow: 1;
+          }
+
+          ul{
+            margin-left: auto;
+            margin-top: 24px;
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom: 20px;
+
+            li{
+              justify-content: flex-end;
+              display: flex;
+              margin-bottom: 8px;
+              h3{
+                font-size: 14px;
+                font-weight: 600;
+              }
+              p{
+                font-size: 16px;
+                margin-top: 8px;
+              }
+            }
+          }
+        }
+
+        h2 {
+          margin-top: 52px;
+          font-size: 32px;
+          text-transform: uppercase;
+        }
+
+        p{
+          margin-top: 24px;
+          font-size: 18px;
+          line-height: 26px;
+        }
+      }
+
+      section.experiences {
+        margin-top: 40px;
+
+        h2{
+          font-size: 32px;
+          text-transform: uppercase;
+        }
+
+        ul{
+          margin-top: 24px;
+          list-style-type: none;
+          margin-left: 0;
+          li{
+            font-size: 18px;
+            margin-bottom: 32px;
+            line-height: 26px;
+            h3{
+              font-size: 22px;
+            }
+            h4{
+              margin-top: 8px;
+              margin-bottom: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+}
+.secondary-color {
+  color: #30BDBE
+}
