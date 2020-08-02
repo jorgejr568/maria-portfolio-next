@@ -5,7 +5,6 @@ import fetch_educations from '../src/fetchers/educations'
 import fetch_skills from '../src/fetchers/skills'
 
 export default function Index({ pageProps }) {
-  console.log(pageProps)
   return (
     <Home
       currentDate={pageProps.currentDate}

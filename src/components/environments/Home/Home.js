@@ -1,7 +1,4 @@
 import React from 'react'
-import experience_date_normalizer from '../../../normalizer/experience_date'
-import Head from 'next/head'
-import education_date_normalizer from '../../../normalizer/education_date'
 
 import profileImage from '../../../../public/images/profile-photo.png'
 import SkillSection from '../../organisms/SkillSection/SkillSection'
@@ -9,12 +6,6 @@ import SkillSection from '../../organisms/SkillSection/SkillSection'
 function Home({ currentDate, experiences, educations, skills }) {
   return (
     <>
-      <Head>
-        <title>
-          Maria Diniz | Marketing Digital | Formanda de Comunicação Social
-        </title>
-        <html lang="pt-BR" />
-      </Head>
       <main id="homePage">
         <section className="card">
           <article className="profile-image">
@@ -73,10 +64,8 @@ function Home({ currentDate, experiences, educations, skills }) {
                       </a>
                     </h3>
                     <h4>
-                      {experience_date_normalizer(experience.started_at)} -{' '}
-                      {experience.finished_at
-                        ? experience_date_normalizer(experience.finished_at)
-                        : 'O momento'}
+                      {experience.started_at} -{' '}
+                      {experience.finished_at || 'O momento'}
                     </h4>
 
                     <p>{experience.description}</p>
@@ -102,10 +91,8 @@ function Home({ currentDate, experiences, educations, skills }) {
                       </a>
                     </h3>
                     <h4>
-                      {education_date_normalizer(education.started_at)} -{' '}
-                      {education.finished_at
-                        ? education_date_normalizer(education.finished_at)
-                        : 'O momento'}
+                      {education.started_at} -{' '}
+                      {education.finished_at || 'O momento'}
                     </h4>
                   </li>
                 ))}

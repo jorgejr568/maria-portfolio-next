@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "dayjs": "^1.8.31",
     "dotenv": "^8.2.0",
     "next": "9.5.1",
     "next-images": "^1.4.1",

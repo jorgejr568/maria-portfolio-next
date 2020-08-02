@@ -6,12 +6,13 @@ main#homePage {
   justify-content: center;
 
   section.card {
+    box-sizing: border-box;
     margin-top: 80px;
     background-color: white;
     box-shadow: #444 2px 20px 80px;
     border-radius: 8px;
-    padding: 30px 90px;
-    width: 75%;
+    padding: 30px 90px 30px 90px;
+    width: 90%;
     max-width: 1200px;
     display: flex;
     justify-content: space-between;
@@ -30,10 +31,10 @@ main#homePage {
         list-style-type: none;
         margin-left: 0;
         li{
-          line-height: 26px;
           margin-bottom: 12px;
           h3{
-            font-size: 22px;
+            line-height: 26px;
+            font-size: 18px;
           }
         }
       }
@@ -91,6 +92,7 @@ main#homePage {
         }
 
         h2 {
+          line-height: 42px;
           margin-top: 52px;
           font-size: 32px;
           text-transform: uppercase;
@@ -107,6 +109,7 @@ main#homePage {
         margin-top: 40px;
 
         h2{
+          line-height: 42px;
           font-size: 32px;
           text-transform: uppercase;
         }
@@ -120,6 +123,7 @@ main#homePage {
             margin-bottom: 32px;
             line-height: 26px;
             h3{
+              line-height: 34px;
               font-size: 22px;
             }
             h4{
@@ -132,6 +136,10 @@ main#homePage {
       section.skills{
         display: none;
       }
+    }
+
+    footer{
+      margin-top: 100px;
     }
   }
 
@@ -146,6 +154,8 @@ main#homePage {
   main#homePage {
 
     section.card {
+      padding: 20px;
+      width: 100%;
       margin-top: 0;
       article.profile-image {
         width: 100%;
@@ -161,6 +171,9 @@ main#homePage {
         width: 100% ;
         section.presentation{
           article.me{
+            h1{
+              font-size: 46px;
+            }
             flex-wrap: wrap;
             ul{
               align-items: flex-start;
@@ -169,6 +182,21 @@ main#homePage {
           }
           h2{
             margin-top: 24px;
+            font-size: 26px;
+          }
+        }
+        section.educations,section.experiences{
+          h2{
+            font-size: 26px;
+          }
+          ul li {
+            h3 {
+              font-size: 20px;
+            }
+
+            h4, p {
+              font-size: 17px;
+            }
           }
         }
         section.skills{

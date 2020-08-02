@@ -5,7 +5,7 @@ require('dotenv').config({
 module.exports = {
   env: {
     API_URL: process.env.API_URL,
-    REVALIDATE_TIME: process.env.REVALIDATE_TIME || 60 * 60 * 1,
+    REVALIDATE_TIME: process.env.REVALIDATE_TIME || 60 * 5 * 1,
   },
 }
 
