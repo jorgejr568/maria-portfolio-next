@@ -6,6 +6,7 @@ module.exports = {
   env: {
     API_URL: process.env.API_URL,
     REVALIDATE_TIME: process.env.REVALIDATE_TIME || 60 * 5 * 1,
+    TZ: 'America/Sao_Paulo',
   },
 }
 
