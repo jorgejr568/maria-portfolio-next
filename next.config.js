@@ -2,6 +2,7 @@ require('dotenv').config({
   path: '.env',
 })
 
+console.log({ REVALIDATE_TIME: process.env.REVALIDATE_TIME })
 module.exports = {
   env: {
     API_URL: process.env.API_URL,
