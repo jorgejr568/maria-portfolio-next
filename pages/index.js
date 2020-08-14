@@ -16,7 +16,7 @@ export default function Index({ pageProps }) {
   )
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const experiences = await fetch_experiences()
   const educations = await fetch_educations()
   const skills = await fetch_skills()
@@ -27,5 +27,6 @@ export const getServerSideProps = async () => {
       educations,
       skills,
     },
+    revalidate: process.env.REVALIDATE_TIME,
   }
 }
